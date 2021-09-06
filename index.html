@@ -5,24 +5,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/src/index.css">
+    <title>Datetime superapp</title>
+    <script src="/node_modules/howler/dist/howler.min.js"></script>
+    <script src="/src/main.js" type="module"></script>
 </head>
 
 <body>
-    <form id="datecalc">
-        <h3>Калькулятор дат</h3>
-        <label>
-            <strong>Первая дата:</strong>
-            <input type="date" name="firstDate" />
-        </label>
-        <label>
-            <strong>Вторая дата:</strong>
-            <input type="date" name="secondDate" />
-        </label>
-        <button type="submit">Расчитать промежуток</button>
-        <p id="datecalc__result"></p>
-    </form>
+    <div class="tabs">
+        <div class="tab_titles">
+            <button>Datecalc</button>
+            <button>Timer</button>
+        </div>
+        <div class="tab_contents">
+            <div>
+                <form id="datecalc">
+                    <h3>Калькулятор дат</h3>
+                    <label>
+                        <strong>Первая дата:</strong>
+                        <input type="date" name="firstDate" />
+                    </label>
+                    <label>
+                        <strong>Вторая дата:</strong>
+                        <input type="date" name="secondDate" />
+                    </label>
+                    <button type="submit">Расчитать промежуток</button>
+                    <p id="datecalc__result"></p>
+                </form>
+            </div>
+            <div>
+                <div class="timer">
+                    <input type="text" name="time" id="time">
+                    <button id="button">Запуск</button>
+                    <button id="button_stop">Стоп</button>
+                    <div id="timer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+
+    <script src="/src/timer.js"></script>
 </body>
 
 </html>
