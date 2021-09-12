@@ -1,4 +1,4 @@
-import { DateTime } from "/src/luxon.js";
+import { DateTime } from "./luxon";
 
 export function diffDates(firstDate, secondDate) {
     firstDate = DateTime.fromISO(firstDate);
@@ -9,12 +9,3 @@ export function diffDates(firstDate, secondDate) {
 
     return secondDate.diff(firstDate, ['years', 'months', 'days']).toObject();
 }
-
-
-export const diffToHtml = diff => `
-    <span> 
-        ${diff.years ? 'Лет: ' + diff.years : ''} 
-        ${diff.months ? 'Месяцев: ' + diff.months : ''} 
-        ${diff.days ? 'Дней: ' + diff.days : ''}
-    </span>
-`;
