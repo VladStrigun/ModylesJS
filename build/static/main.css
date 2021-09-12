@@ -1,0 +1,16 @@
+/*!*****************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/index.css ***!
+  \*****************************************************************/
+.tab_contents>div {
+    display: none;
+}
+.tab_contents>div.active {
+    display: block;
+}
+.tab_titles>button {
+    background-color: #fff;
+}
+.tab_titles>button.active {
+    background-color: rgb(51, 223, 16);
+}
+
